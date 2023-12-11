@@ -48,7 +48,7 @@ function createNavigation(){
 
 function loadWebSite(){
     const content = document.getElementById('content');
-
+    //comment here
     content.appendChild(createHeader());
     
     content.appendChild(createFooter());
