@@ -22,10 +22,11 @@ const loadMenu = () => {
     body.classList.add('p');
     body02.classList.add('p');
 
-    const contentDiv = document.getElementById('content');
+    const contentDiv = document.createElement('menu');
     contentDiv.appendChild(h2);
     contentDiv.appendChild(body);
     contentDiv.appendChild(body02);
+    
 
     h2 = document.createElement('h2');
     body = document.createElement('p');
@@ -48,6 +49,8 @@ const loadMenu = () => {
     contentDiv.appendChild(body02);
 
     contentDiv.style.backgroundImage = "url(../src/menubackground.png)"; 
+
+    return contentDiv;
 
 }
 

@@ -31,6 +31,7 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     width: 100%;
     padding: 2rem;
     background-color: rgba(0, 0, 0, 0.6);;
@@ -56,9 +57,14 @@ h2{
     font-size: 20px;
     border: #222;
     cursor: pointer;
+    color: aliceblue;
   }
 
   .title{
     font-size: 40px;
     color: aliceblue;
+  }
+
+  .body-content{
+    display: flex;
   }

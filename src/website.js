@@ -1,4 +1,5 @@
 import './style.css';
+import { loadMenu } from './menu';
 
 function createFooter() {
   const footer = document.createElement('footer');
@@ -22,6 +23,7 @@ function createHeader(){
   title.classList.add('title');
 
   header.appendChild(title);
+  header.appendChild(createNavigation());
 
   return header;
 }
@@ -37,6 +39,11 @@ function createNavigation(){
   const menu = document.createElement('button');
   menu.classList.add('button-nav');
   menu.textContent = 'Menu';
+  menu.addEventListener('click', () => {
+    const body = document.getElementsByClassName('body-content');
+    body.appendChild(loadMenu());
+    
+  });
 
   const contact = document.createElement('button');
   contact.classList.add('button-nav');
@@ -51,9 +58,11 @@ function createNavigation(){
 
 function loadWebSite(){
     const content = document.getElementById('content');
+    const body = document.createElement('body-content');
+    body.classList.add('body-content');
     
     content.appendChild(createHeader());
-    content.appendChild(createNavigation());
+    content.appendChild(body);
     content.appendChild(createFooter());
     
 }
