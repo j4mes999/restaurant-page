@@ -1,5 +1,4 @@
-import { container } from 'webpack';
-import './style.css'
+import './style.css';
 
 function createFooter() {
   const footer = document.createElement('footer');
@@ -20,6 +19,7 @@ function createHeader(){
 
   const title = document.createElement('p');
   title.textContent = 'Luigi\'s Cuisine';
+  title.classList.add('title');
 
   header.appendChild(title);
 
@@ -30,13 +30,16 @@ function createNavigation(){
   const nav = document.createElement('navigation');
   nav.classList.add('navigation');
 
-  const home = document.createElement('div');
+  const home = document.createElement('button');
+  home.classList.add('button-nav');
   home.textContent = 'Home';
 
-  const menu = document.createElement('div');
+  const menu = document.createElement('button');
+  menu.classList.add('button-nav');
   menu.textContent = 'Menu';
 
-  const contact = document.createElement('div');
+  const contact = document.createElement('button');
+  contact.classList.add('button-nav');
   contact.textContent = 'Contact';
 
   nav.appendChild(home);
@@ -48,11 +51,11 @@ function createNavigation(){
 
 function loadWebSite(){
     const content = document.getElementById('content');
-    //comment here
-    content.appendChild(createHeader());
     
+    content.appendChild(createHeader());
+    content.appendChild(createNavigation());
     content.appendChild(createFooter());
     
-};
+}
 
 export default loadWebSite;
