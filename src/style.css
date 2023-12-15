@@ -68,3 +68,9 @@ h2{
   .body-content{
     display: flex;
   }
+
+  .home{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }

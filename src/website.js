@@ -1,5 +1,7 @@
 import './style.css';
-import { loadMenu } from './menu';
+import loadMenu  from './menu';
+import { loadContact } from './contact';
+import { homeLoad } from './home';
 
 function createFooter() {
   const footer = document.createElement('footer');
@@ -35,19 +37,29 @@ function createNavigation(){
   const home = document.createElement('button');
   home.classList.add('button-nav');
   home.textContent = 'Home';
+  home.addEventListener('click', () => {
+    const body = document.getElementById('body');
+    body.innerHTML = '';
+    body.appendChild(homeLoad());
+  })
 
   const menu = document.createElement('button');
   menu.classList.add('button-nav');
   menu.textContent = 'Menu';
   menu.addEventListener('click', () => {
-    const body = document.getElementsByClassName('body-content');
+    const body = document.getElementById('body');
+    body.innerHTML = '';
     body.appendChild(loadMenu());
-    
   });
 
   const contact = document.createElement('button');
   contact.classList.add('button-nav');
   contact.textContent = 'Contact';
+  contact.addEventListener('click', () => {
+    const body = document.getElementById('body');
+    body.innerHTML = '';
+    body.appendChild(loadContact());
+  });
 
   nav.appendChild(home);
   nav.appendChild(menu);
@@ -58,8 +70,9 @@ function createNavigation(){
 
 function loadWebSite(){
     const content = document.getElementById('content');
-    const body = document.createElement('body-content');
+    const body = document.createElement('body');
     body.classList.add('body-content');
+    body.setAttribute('id', 'body');
     
     content.appendChild(createHeader());
     content.appendChild(body);

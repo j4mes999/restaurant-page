@@ -16,12 +16,14 @@ const loadContact = () => {
     region.innerHTML = CONTACT_REGION;
     region.classList.add('p');
 
-    const content = document.getElementById('content');
+    const content = document.createElement('contact');
     content.appendChild(h2);
     content.appendChild(body);
     content.appendChild(region);
 
     content.style.backgroundImage = "url(../src/menubackground.png)"; 
+
+    return content;
 
 };
 

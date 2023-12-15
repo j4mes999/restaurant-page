@@ -1,6 +1,6 @@
 import './style.css';
 
-const loadMenu = () => {
+function loadMenu(){
     const STARTERS_TITLE = 'Starters';
     const STARTER01 = 'Fish soup';
     const STARTER02 = 'Caribañola';
@@ -54,4 +54,4 @@ const loadMenu = () => {
 
 }
 
-export {loadMenu};
+export default loadMenu;

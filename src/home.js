@@ -6,9 +6,6 @@ const homeLoad = () => {
     const P1 = 'Get ready to have the best experience in town. A genuine culinary experience.';
     const P2 = 'With Caribbean flavors mixed with Pacific and native indigineous cuisine from Colombia';
 
-    const image = new Image();
-    image.src = RestaurantImage;
-
     const title = document.createElement('h1');
     title.innerHTML = TITLE_TEXT;
 
@@ -18,11 +15,13 @@ const homeLoad = () => {
     paragraph1.classList.add('p');
     paragraph2.innerHTML = P2;
 
-    const content = document.getElementById("content");
+    const content = document.createElement("home");
+    content.classList.add('home');
     content.appendChild(title);
-    content.appendChild(image);
     content.appendChild(paragraph1);
     content.appendChild(paragraph2);
+
+    return content;
 }
 
 export {homeLoad};
