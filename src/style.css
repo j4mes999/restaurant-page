@@ -1,3 +1,9 @@
+:root{
+  --background-body: rgba(0, 0, 0, 0.6);
+  --border-color:  #222;
+  --main-font-color: aliceblue;
+}
+
 .content{
     display: flex;
     flex-direction: column;
@@ -23,8 +29,9 @@ h2{
     gap: 1rem;
     width: 100%;
     padding: 1rem;
-    border-top: 1px solid #222;
-    background-color:  rgba(0, 0, 0, 0.6);
+    border-top: 1px solid var(--border-color);
+    background-color:  var(--background-body);
+    color: var(--main-font-color);
   }
 
   .header {
@@ -34,8 +41,8 @@ h2{
     flex-direction: column;
     width: 100%;
     padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.6);;
-    border-bottom: 1px solid #222;
+    background-color: var(--background-body);
+    border-bottom: 1px solid var(--border-color);
     font-family: sans-serif;
     font-style: italic;
   }
@@ -57,20 +64,27 @@ h2{
     font-size: 20px;
     border: #222;
     cursor: pointer;
-    color: aliceblue;
+    color: var(--main-font-color);
   }
 
   .title{
     font-size: 40px;
-    color: aliceblue;
+    color: var(--main-font-color);
   }
 
   .body-content{
     display: flex;
+    background-color: var(--background-body);
+    border: 1px solid var(--border-color);
+    color: var(--main-font-color);
   }
 
-  .home{
+  .home,
+  .menu,
+  .contact{
     display: flex;
     align-items: center;
     flex-direction: column;
   }
+
+  

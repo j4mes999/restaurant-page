@@ -17,11 +17,10 @@ const loadContact = () => {
     region.classList.add('p');
 
     const content = document.createElement('contact');
+    content.classList.add('contact');
     content.appendChild(h2);
     content.appendChild(body);
     content.appendChild(region);
-
-    content.style.backgroundImage = "url(../src/menubackground.png)"; 
 
     return content;
 

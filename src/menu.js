@@ -23,6 +23,7 @@ function loadMenu(){
     body02.classList.add('p');
 
     const contentDiv = document.createElement('menu');
+    contentDiv.classList.add('menu');
     contentDiv.appendChild(h2);
     contentDiv.appendChild(body);
     contentDiv.appendChild(body02);
@@ -47,8 +48,6 @@ function loadMenu(){
     contentDiv.appendChild(h2);
     contentDiv.appendChild(body);
     contentDiv.appendChild(body02);
-
-    contentDiv.style.backgroundImage = "url(../src/menubackground.png)"; 
 
     return contentDiv;
 

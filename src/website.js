@@ -75,6 +75,7 @@ function loadWebSite(){
     body.setAttribute('id', 'body');
     
     content.appendChild(createHeader());
+    body.appendChild(homeLoad());
     content.appendChild(body);
     content.appendChild(createFooter());
     
